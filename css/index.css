@@ -5,6 +5,16 @@
           box-sizing: border-box;
 }
 
+:root {
+  --common-color: #C4C4C4;
+  --v-margin: 2em;
+  --h-margin: 4em;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: #D9D9D9;
   display: -webkit-box;
@@ -24,4 +34,152 @@ body {
 
 main {
   background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 5em 0;
+}
+main header {
+  width: 100%;
+}
+main header .navs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--common-color);
+}
+main header .navs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+main header .navs ul li {
+  color: var(--common-color);
+  list-style: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0.8em 0.4em;
+}
+main header .navs ul li div h3 {
+  font-size: clamp(1.4rem, 1vw, 2rem);
+}
+main header .navs ul li .wears {
+  color: #000;
+}
+main header .navs ul li .vertical__line {
+  height: clamp(1em, 5vh, 4em);
+  border: solid 1px var(--common-color);
+}
+main header .navs ul li .geen__eclipse {
+  width: 2em;
+}
+main header .navs ul li .dotted__lines {
+  width: clamp(4em, 20vw, 10em);
+  border: dashed 1px var(--common-color);
+}
+main header .navs .img img {
+  width: 6.071em;
+  height: 4em;
+}
+main main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main main .container {
+  width: 100%;
+  display: grid;
+  -webkit-column-gap: 10em;
+     -moz-column-gap: 10em;
+          column-gap: 10em;
+  grid-template-areas: "order__container payment__container" "order__container payment__method";
+}
+main main .order__container {
+  width: 100%;
+  grid-area: order__container;
+  margin: var(--v-margin) var(--h-margin);
+}
+main main .order__container .summary {
+  width: 60%;
+  font-size: clamp(0.7rem, 0.8vw, 1.5rem);
+}
+main main .order__container .item {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  border: 1px solid var(--common-color);
+  border-radius: 0.4em;
+  margin: 3.5em 0;
+}
+main main .order__container .item .first__item,
+main main .order__container .item .second__item {
+  margin: 0.6em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main main .order__container .item .first__item .img img,
+main main .order__container .item .second__item .img img {
+  width: 6em;
+  margin: 0 0.4em 0 0;
+}
+main main .order__container .item .first__item .text,
+main main .order__container .item .second__item .text {
+  font-size: clamp(0.5rem, 0.755w, 1.5rem);
+}
+main main .order__container .item .first__item .text .span,
+main main .order__container .item .second__item .text .span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+main main .payment__container {
+  background-color: aquamarine;
+  width: 100%;
+  grid-area: payment__container;
+  margin: var(--v-margin) var(--h-margin);
+}
+main main .payment__method {
+  grid-area: payment__method;
+  margin: var(--v-margin) var(--h-margin);
 }/*# sourceMappingURL=index.css.map */
