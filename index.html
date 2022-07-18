@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CREDIT CARD</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <main>
@@ -13,9 +14,9 @@
             <ul>
                 <li class="wears"><h3>LOOK UP WEARS</h3></li>
                 <li><div class="vertical__line"></div></li>
-                <li><div class="order__view"><h3>Overview oredr</h3></div></li>
+                <li><div class="order__view"><h3>Overview order</h3></div></li>
                 <li><div class="green__eclipse"></div></li>
-                <li><div class="order__info"><h3>Oredr information</h3></div></li>
+                <li><div class="order__info"><h3>Order information</h3></div></li>
                 <li><div class="dotted__lines"></div></li>
                 <li><div class="ash__eclipse"></div></li>
                 <li><div class="payment"><h3>Payment details</h3></div></li>                
@@ -29,7 +30,7 @@
 
         <main>
         <div class="container">
-            <section class="oredr__container">
+            <section class="order__container">
 
                 <div class="summary">
                     <h2>Summary of your orders</h2>
@@ -215,7 +216,125 @@
             </section>
 
             <section class="payment__method">
+
+                <div class="text">
+                    <h4>Choose your Payment method</h4>
+                </div>
+
+                <div class="card-details">
                 
+                    <div class="credit-card-container">
+                        <div class="credit-card">
+                
+                            <div class="img">
+                                <img src="assets/media/images/credit-card.svg" alt="">
+                            </div>
+                
+                            <div class="text">
+                                <h4>Credit Card</h4>
+                            </div>
+                        </div>
+                        <div class="card__logo">
+                            <img src="assets/media/images/mater-visa-card.png" alt="Master and Visa Card Logo">
+                            <img src="assets/media/images/paypal.png" alt="Paypal Logo">
+                        </div>
+                    </div>
+                
+                    <div class="card__number-container">
+                        <div class="number">
+                            <div class="text">
+                                <h4>Card Number</h4>
+                            </div>
+                
+                            <div class="card__number">
+                                <input type="text" placeholder="1234 5678 6743 6543">
+                            </div>
+                        </div>
+                
+                        <div class="cvv">
+                            <div class="text">
+                                <h4>CVV</h4>
+                            </div>
+                
+                            <div class="card__number">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expiry-date-container">
+
+                        <div class="text">
+                            <h4>Expiry Date</h4>
+                        </div>
+
+                        <div class="expiry-date">
+
+                            <div class="month">
+                                <select>
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                    <option value="" selected disabled>MONTH</option>
+                                </select>
+                            </div>
+                            <!-- <div class="month">
+                                <input type="text" placeholder="MONTH">
+                            </div> -->
+
+                            <div class="year">
+                                <select>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option selected disabled>YEAR</option>
+                                </select>
+                            </div>
+                            <!-- <div class="year">
+                                <input type="text" placeholder="YEAR">
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                    <div class="total-container">
+
+                        <div class="sub-total">
+                            <p>Sub total</p>
+                            <p>$45.80</p>
+                        </div>
+
+                        <div class="vat">
+                            <p>Vat (20%)</p>
+                            <p>$2.50</p>
+                        </div>
+
+                        <div class="total">
+                            <b>Total</b>
+                            <b>$48.40</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <button><h1>Pay $48.40</h1></button>
+                </div>
             </section>
         </div>
         </main>
