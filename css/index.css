@@ -1,12 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
   --common-color: #C4C4C4;
+  --blur-text: rgba(0, 0, 0, 0.35);
   --v-margin: 2em;
   --h-margin: 4em;
 }
@@ -17,63 +17,34 @@ html {
 
 body {
   background-color: #D9D9D9;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
   background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 80%;
+  flex-flow: column;
+  align-items: center;
+  width: 90%;
   margin: 5em 0;
 }
 main header {
   width: 100%;
 }
 main header .navs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   border-bottom: 1px solid var(--common-color);
 }
 main header .navs ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
 }
 main header .navs ul li {
@@ -106,80 +77,201 @@ main header .navs .img img {
   height: 4em;
 }
 main main {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 100%;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 main main .container {
   width: 100%;
   display: grid;
-  -webkit-column-gap: 10em;
-     -moz-column-gap: 10em;
-          column-gap: 10em;
+  -moz-column-gap: 10em;
+       column-gap: 10em;
   grid-template-areas: "order__container payment__container" "order__container payment__method";
 }
-main main .order__container {
+main main .container .order__container {
   width: 100%;
   grid-area: order__container;
   margin: var(--v-margin) var(--h-margin);
+  border: 3px solid;
 }
-main main .order__container .summary {
+main main .container .order__container .summary {
   width: 60%;
   font-size: clamp(0.7rem, 0.8vw, 1.5rem);
 }
-main main .order__container .item {
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+main main .container .order__container .item {
+  width: 75%;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  flex-flow: column;
   border: 1px solid var(--common-color);
   border-radius: 0.4em;
   margin: 3.5em 0;
 }
-main main .order__container .item .first__item,
-main main .order__container .item .second__item {
+main main .container .order__container .item .first__item,
+main main .container .order__container .item .second__item {
   margin: 0.6em 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-main main .order__container .item .first__item .img img,
-main main .order__container .item .second__item .img img {
+main main .container .order__container .item .first__item .img img,
+main main .container .order__container .item .second__item .img img {
   width: 6em;
   margin: 0 0.4em 0 0;
 }
-main main .order__container .item .first__item .text,
-main main .order__container .item .second__item .text {
-  font-size: clamp(0.5rem, 0.755w, 1.5rem);
+main main .container .order__container .item .first__item .text,
+main main .container .order__container .item .second__item .text {
+  font-size: clamp(0.5rem, 0.75vw, 1.5rem);
+  font-family: Tahoma;
 }
-main main .order__container .item .first__item .text .span,
-main main .order__container .item .second__item .text .span {
-  display: -webkit-box;
-  display: -ms-flexbox;
+main main .container .order__container .item .first__item .text h3,
+main main .container .order__container .item .second__item .text h3 {
+  width: 90%;
+}
+main main .container .order__container .item .first__item .text .span,
+main main .container .order__container .item .second__item .text .span {
+  color: var(--blur-text);
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
+  font-weight: 600;
 }
-main main .payment__container {
-  background-color: aquamarine;
-  width: 100%;
+main main .container .order__container .delivery__means .text {
+  display: flex;
+  align-items: center;
+}
+main main .container .order__container .delivery__means .text h3 {
+  font-size: clamp(0.5rem, 0.95vw, 1.5rem);
+  margin: 0 0.4em;
+}
+main main .container .order__container .delivery__means .text img {
+  width: 1.5em;
+}
+main main .container .order__container .delivery__means .delivery {
+  border: 1px solid var(--common-color);
+  border-radius: 0.2em;
+  display: flex;
+  align-items: center;
+  margin: 1.5em 0;
+  padding-right: 8%;
+  min-height: 2em;
+}
+main main .container .order__container .delivery__means .delivery .img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main main .container .order__container .delivery__means .delivery .img img {
+  width: 5em;
+  margin: 0.8em 3em 1em 1.5em;
+}
+main main .container .order__container .delivery__means .delivery .text {
+  display: inline-block;
+  font-size: clamp(0.6rem, 0.7vw, 1.5rem);
+}
+main main .container .order__container .delivery__means .delivery .text h2 {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0.2em 0 0.5em;
+}
+main main .container .order__container .delivery__means .delivery .text span {
+  font-family: "Courier New", Courier, monospace;
+}
+main main .container .order__container .delivery__means .delivery .amount {
+  margin-left: auto;
+}
+main main .container .order__container .delivery__means .delivery .amount h4 {
+  font-size: clamp(0.5rem, 0.75vw, 1.5rem);
+}
+main main .container .order__container .delivery__means .ups .amount h4 {
+  color: red;
+}
+main main .container .payment__container {
   grid-area: payment__container;
   margin: var(--v-margin) var(--h-margin);
+  border: 3px solid;
 }
-main main .payment__method {
+main main .container .payment__container .text {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  font-size: clamp(0.9rem, 1vw, 1.7rem);
+}
+main main .container .payment__container .text h5 {
+  margin: 0.5em 0.2em;
+}
+main main .container .payment__container .details-add {
+  display: flex;
+  flex-flow: row;
+}
+main main .container .payment__container .details-add .details__container {
+  width: 100%;
+}
+main main .container .payment__container .details-add .details__container .details {
+  width: inherit;
+  border: solid 1px var(--common-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.3em 0;
+  transition: 0.1s;
+}
+main main .container .payment__container .details-add .details__container .details .img {
+  margin: 0.7em 1em;
+}
+main main .container .payment__container .details-add .details__container .details .img img {
+  width: 7em;
+}
+main main .container .payment__container .details-add .details__container .details .card__detail {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em 0 0;
+}
+main main .container .payment__container .details-add .details__container .details .card__detail .stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main main .container .payment__container .details-add .details__container .details .card__detail .stars div {
+  margin-bottom: 0.3em;
+}
+main main .container .payment__container .details-add .details__container .details .card__detail .name {
+  font-size: clamp(0.5rem, 0.8vw, 1.5rem);
+}
+main main .container .payment__container .details-add .details__container .details .expiry__date {
+  margin-left: auto;
+}
+main main .container .payment__container .details-add .details__container .details .expiry__date h4,
+main main .container .payment__container .details-add .details__container .details .expiry__date span {
+  margin: 0 1em 0 0;
+}
+main main .container .payment__container .details-add .details__container .details:hover {
+  border: solid 1px var(--common-color);
+  box-shadow: 0px 1px 3px 1px #66f;
+  transition: 0.1s;
+  transform: scale(1.01);
+}
+main main .container .payment__container .details-add .details__container .mastercard {
+  margin: 0 0 2em 0;
+}
+main main .container .payment__container .details-add .add {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+main main .container .payment__container .details-add .add .img img {
+  width: 2.5em;
+}
+main main .container .payment__container .details-add .add p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  font-size: clamp(0.5rem, 0.9vw, 1.2rem);
+  font-weight: 500;
+  margin: 0.5em 1em 0 2em;
+}
+main main .container .payment__method {
   grid-area: payment__method;
   margin: var(--v-margin) var(--h-margin);
+  border: 3px solid;
 }/*# sourceMappingURL=index.css.map */
