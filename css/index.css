@@ -75,6 +75,7 @@ main header .navs ul li .dotted__lines {
 main header .navs .img img {
   width: 6.071em;
   height: 4em;
+  margin: 0 2em;
 }
 main main {
   width: 100%;
