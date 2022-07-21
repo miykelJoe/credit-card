@@ -29,7 +29,7 @@ main{
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 90%;
+    width: 80%;
     margin: 5em 0;
     
     
@@ -108,11 +108,11 @@ main{
             'order__container payment__container'
             'order__container payment__method' ;
         
-            .order__container,
-            .payment__container,
-            .payment__method{
-                // border: 3px solid ;
-            }
+            // .order__container,
+            // .payment__container,
+            // .payment__method{
+            //     border: 3px solid ;
+            // }
 
             .order__container{
                 width: 100%;
@@ -408,7 +408,6 @@ main{
                                 flex-direction: column;
                                 margin: 0 0 2em 0;
                                 width: 100%;
-                                // background-color: #66f;
                                 
                                 .text{
                                     font-size: var(--payment-fs);
@@ -419,9 +418,11 @@ main{
 
                                         input{
                                             width: inherit;
-                                            padding: var(--padding);
-                                            border: 1px solid var(--common-color);
                                             font-size: clamp(1rem, 1.2vw, 2rem);
+                                            border: 1px solid var(--common-color);
+                                            border-radius: .3em;
+                                            outline: none;
+                                            padding: var(--padding);
                                         }
                                 }
                             }
@@ -441,7 +442,11 @@ main{
 
                                 .month select,
                                 .year select{
+                                    background-color: #ffffff;
                                     padding: .09em .4em;
+                                    border: 1px solid var(--common-color);
+                                    border-radius: .3em;
+                                    outline: none;
                                 }
                             }
                         }
@@ -455,11 +460,16 @@ main{
                             width: 100%;
                             display: flex;
                             flex-direction: column;
+                            
                         
                             .card__number{
                                 width: inherit;
                                 input{
                                     width: inherit;
+                                    border: 1px solid var(--common-color);
+                                    border-radius: .3em;
+                                    padding: .5em;
+                                    outline: none;
                                 }
                             }
                         }

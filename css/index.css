@@ -28,7 +28,7 @@ main {
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 90%;
+  width: 80%;
   margin: 5em 0;
 }
 main header {
@@ -339,9 +339,11 @@ main main .container .payment__method .card-details-container .card-details .car
 }
 main main .container .payment__method .card-details-container .card-details .card__number-container .number .card__number input {
   width: inherit;
-  padding: var(--padding);
-  border: 1px solid var(--common-color);
   font-size: clamp(1rem, 1.2vw, 2rem);
+  border: 1px solid var(--common-color);
+  border-radius: 0.3em;
+  outline: none;
+  padding: var(--padding);
 }
 main main .container .payment__method .card-details-container .card-details .expiry-date-container {
   display: flex;
@@ -356,7 +358,11 @@ main main .container .payment__method .card-details-container .card-details .exp
 }
 main main .container .payment__method .card-details-container .card-details .expiry-date-container .expiry-date .month select,
 main main .container .payment__method .card-details-container .card-details .expiry-date-container .expiry-date .year select {
+  background-color: #ffffff;
   padding: 0.09em 0.4em;
+  border: 1px solid var(--common-color);
+  border-radius: 0.3em;
+  outline: none;
 }
 main main .container .payment__method .card-details-container .cvv-container {
   width: 30%;
@@ -371,6 +377,10 @@ main main .container .payment__method .card-details-container .cvv-container .cv
 }
 main main .container .payment__method .card-details-container .cvv-container .cvv .card__number input {
   width: inherit;
+  border: 1px solid var(--common-color);
+  border-radius: 0.3em;
+  padding: 0.5em;
+  outline: none;
 }
 main main .container .payment__method .total-container {
   display: flex;
