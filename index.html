@@ -245,40 +245,97 @@
 
                 <section class="payment__method">
 
-                    <div class="text">
+                    <div class="choose-payment-text">
                         <h4>Choose your Payment method</h4>
                     </div>
 
-                    <div class="card-details">
+                    <div class="card-details-container">
 
-                        <div class="credit-card-container">
-                            <div class="credit-card">
+                        <div class="card-details">
+                            <div class="credit-card-container">
+                                <div class="credit-card">
 
-                                <div class="img">
-                                    <img src="assets/media/images/credit-card.svg" alt="">
+                                    <div class="img">
+                                        <img src="assets/media/images/credit-card.svg" alt="">
+                                    </div>
+
+                                    <div class="text">
+                                        <h4>Credit Card</h4>
+                                    </div>
                                 </div>
-
-                                <div class="text">
-                                    <h4>Credit Card</h4>
+                                <div class="card__logo">
+                                    <img src="assets/media/images/mater-visa-card.png" alt="Master and Visa Card Logo">
+                                    <img src="assets/media/images/paypal.png" alt="Paypal Logo">
                                 </div>
                             </div>
-                            <div class="card__logo">
-                                <img src="assets/media/images/mater-visa-card.png" alt="Master and Visa Card Logo">
-                                <img src="assets/media/images/paypal.png" alt="Paypal Logo">
+
+                            <div class="card__number-container">
+                                <div class="number">
+                                    <div class="text">
+                                        <h4>Card Number</h4>
+                                    </div>
+
+                                    <div class="card__number">
+                                        <input type="text" placeholder="1234 5678 6743 6543">
+                                    </div>
+                                </div>
+
+                            </div>
+                        
+
+                            <div class="expiry-date-container">
+
+                                <div class="text">
+                                    <h4>Expiry Date</h4>
+                                </div>
+
+                                <div class="expiry-date">
+
+                                    <div class="month">
+                                        <select>
+                                            <option value="January">January</option>
+                                            <option value="February">February</option>
+                                            <option value="March">March</option>
+                                            <option value="April">April</option>
+                                            <option value="May">May</option>
+                                            <option value="June">June</option>
+                                            <option value="July">July</option>
+                                            <option value="August">August</option>
+                                            <option value="September">September</option>
+                                            <option value="October">October</option>
+                                            <option value="November">November</option>
+                                            <option value="December">December</option>
+                                            <option value="" selected disabled>Month</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div class="month">
+                                    <input type="text" placeholder="MONTH">
+                                </div> -->
+
+                                    <div class="year">
+                                        <select>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option selected disabled>Year</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div class="year">
+                                    <input type="text" placeholder="YEAR">
+                                </div> -->
+
+                                </div>
                             </div>
                         </div>
 
-                        <div class="card__number-container">
-                            <div class="number">
-                                <div class="text">
-                                    <h4>Card Number</h4>
-                                </div>
-
-                                <div class="card__number">
-                                    <input type="text" placeholder="1234 5678 6743 6543">
-                                </div>
-                            </div>
-
+                        <div class="cvv-container">
                             <div class="cvv">
                                 <div class="text">
                                     <h4>CVV</h4>
@@ -290,58 +347,9 @@
                             </div>
                         </div>
 
-                        <div class="expiry-date-container">
+                    </div>
 
-                            <div class="text">
-                                <h4>Expiry Date</h4>
-                            </div>
-
-                            <div class="expiry-date">
-
-                                <div class="month">
-                                    <select>
-                                        <option value="January">January</option>
-                                        <option value="February">February</option>
-                                        <option value="March">March</option>
-                                        <option value="April">April</option>
-                                        <option value="May">May</option>
-                                        <option value="June">June</option>
-                                        <option value="July">July</option>
-                                        <option value="August">August</option>
-                                        <option value="September">September</option>
-                                        <option value="October">October</option>
-                                        <option value="November">November</option>
-                                        <option value="December">December</option>
-                                        <option value="" selected disabled>MONTH</option>
-                                    </select>
-                                </div>
-                                <!-- <div class="month">
-                                <input type="text" placeholder="MONTH">
-                            </div> -->
-
-                                <div class="year">
-                                    <select>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2025">2025</option>
-                                        <option value="2026">2026</option>
-                                        <option value="2027">2027</option>
-                                        <option value="2028">2028</option>
-                                        <option value="2029">2029</option>
-                                        <option selected disabled>YEAR</option>
-                                    </select>
-                                </div>
-                                <!-- <div class="year">
-                                <input type="text" placeholder="YEAR">
-                            </div> -->
-
-                            </div>
-                        </div>
-
-                        <div class="total-container">
+                    <div class="total-container">
 
                             <div class="sub-total">
                                 <p>Sub total</p>
@@ -357,7 +365,6 @@
                                 <b>Total</b>
                                 <b>$48.40</b>
                             </div>
-                        </div>
                     </div>
 
                     <div class="btn">

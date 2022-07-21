@@ -93,7 +93,6 @@ main main .container .order__container {
   width: 100%;
   grid-area: order__container;
   margin: var(--v-margin) var(--h-margin);
-  border: 3px solid;
 }
 main main .container .order__container .summary {
   width: 60%;
@@ -186,7 +185,6 @@ main main .container .order__container .delivery__means .ups .amount h4 {
 main main .container .payment__container {
   grid-area: payment__container;
   margin: var(--v-margin) var(--h-margin);
-  border: 3px solid;
 }
 main main .container .payment__container .text {
   display: flex;
@@ -273,5 +271,135 @@ main main .container .payment__container .details-add .add p {
 main main .container .payment__method {
   grid-area: payment__method;
   margin: var(--v-margin) var(--h-margin);
-  border: 3px solid;
+  --payment-fs: clamp(.6rem, 1.1vw, 1.4rem);
+}
+main main .container .payment__method .choose-payment-text {
+  font-size: var(--payment-fs);
+}
+main main .container .payment__method .card-details-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 2.5em 0;
+}
+main main .container .payment__method .card-details-container .card-details {
+  width: 60%;
+  --padding: .6rem .5rem;
+}
+main main .container .payment__method .card-details-container .card-details .credit-card-container {
+  display: flex;
+  flex-flow: column;
+  margin: 0 0 1em 0;
+}
+main main .container .payment__method .card-details-container .card-details .credit-card-container .credit-card {
+  border: 1px solid var(--common-color);
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+}
+main main .container .payment__method .card-details-container .card-details .credit-card-container .credit-card .img {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 0.9em 0 0;
+}
+main main .container .payment__method .card-details-container .card-details .credit-card-container .credit-card .img img {
+  width: 2em;
+}
+main main .container .payment__method .card-details-container .card-details .credit-card-container .credit-card .text {
+  font-size: clamp(0.8rem, 1.03vw, 1.5rem);
+}
+main main .container .payment__method .card-details-container .card-details .credit-card-container .card__logo {
+  display: flex;
+  --margin: .3em .5em;
+}
+main main .container .payment__method .card-details-container .card-details .credit-card-container .card__logo img:first-child {
+  width: 6em;
+  height: 2em;
+  margin: var(--margin);
+}
+main main .container .payment__method .card-details-container .card-details .credit-card-container .card__logo img:last-child {
+  width: 3em;
+  height: 2em;
+  margin: var(--margin);
+}
+main main .container .payment__method .card-details-container .card-details .card__number-container .number {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 2em 0;
+  width: 100%;
+}
+main main .container .payment__method .card-details-container .card-details .card__number-container .number .text {
+  font-size: var(--payment-fs);
+  margin: 0 0 0.5em;
+}
+main main .container .payment__method .card-details-container .card-details .card__number-container .number .card__number {
+  width: 100%;
+}
+main main .container .payment__method .card-details-container .card-details .card__number-container .number .card__number input {
+  width: inherit;
+  padding: var(--padding);
+  border: 1px solid var(--common-color);
+  font-size: clamp(1rem, 1.2vw, 2rem);
+}
+main main .container .payment__method .card-details-container .card-details .expiry-date-container {
+  display: flex;
+  flex-direction: column;
+}
+main main .container .payment__method .card-details-container .card-details .expiry-date-container .text {
+  font-size: clamp(0.8rem, 1.1vw, 1.5rem);
+}
+main main .container .payment__method .card-details-container .card-details .expiry-date-container .expiry-date {
+  display: flex;
+  justify-content: space-between;
+}
+main main .container .payment__method .card-details-container .card-details .expiry-date-container .expiry-date .month select,
+main main .container .payment__method .card-details-container .card-details .expiry-date-container .expiry-date .year select {
+  padding: 0.09em 0.4em;
+}
+main main .container .payment__method .card-details-container .cvv-container {
+  width: 30%;
+}
+main main .container .payment__method .card-details-container .cvv-container .cvv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main main .container .payment__method .card-details-container .cvv-container .cvv .card__number {
+  width: inherit;
+}
+main main .container .payment__method .card-details-container .cvv-container .cvv .card__number input {
+  width: inherit;
+}
+main main .container .payment__method .total-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main main .container .payment__method .total-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(0.6rem, 1.1vw, 1.6rem);
+  line-height: 1.8em;
+  padding: 0 1em;
+}
+main main .container .payment__method .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main main .container .payment__method .btn button {
+  background-color: hsl(217deg, 86%, 60%);
+  color: #ffffff;
+  padding: 0.8em 2.1em;
+  border-radius: 0.2em;
+  transition: 0.2s;
+  border: none;
+}
+main main .container .payment__method .btn button:hover {
+  background-color: hsl(217deg, 86%, 30%);
+  transition: 0.2s;
+  transform: scale(1.01);
 }/*# sourceMappingURL=index.css.map */

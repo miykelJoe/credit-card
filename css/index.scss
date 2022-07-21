@@ -38,7 +38,6 @@ main{
         width: 100%;
         
         .navs{
-            // background-color: rgb(255, 21, 0);
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -46,7 +45,6 @@ main{
             border-bottom: 1px solid var(--common-color);
             
             ul{
-                // background-color: rgba(2, 2, 113, 0.282);
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -69,7 +67,7 @@ main{
                         color: #000;                        
 
                         h3{
-                        // font-family: ;
+
                         }
                     }
                     .vertical__line{
@@ -110,12 +108,16 @@ main{
             'order__container payment__container'
             'order__container payment__method' ;
         
+            .order__container,
+            .payment__container,
+            .payment__method{
+                // border: 3px solid ;
+            }
 
             .order__container{
                 width: 100%;
                 grid-area: order__container;
                 margin: var(--v-margin) var(--h-margin);
-                border: 3px solid ;
 
                 .summary{
                     width: 60%;
@@ -235,7 +237,6 @@ main{
             .payment__container{
                 grid-area: payment__container;
                 margin: var(--v-margin) var(--h-margin);
-                border: 3px solid;
 
                 .text{
                     display: flex;
@@ -339,7 +340,172 @@ main{
             .payment__method{
                 grid-area: payment__method;
                 margin: var(--v-margin) var(--h-margin);
-                border: 3px solid ;
+                
+                --payment-fs: clamp(.6rem, 1.1vw, 1.4rem);
+                .choose-payment-text{
+                    font-size: var(--payment-fs);
+                }
+
+                .card-details-container{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 0 2.5em 0;
+
+                    .card-details{
+                        width: 60%;
+
+
+                        --padding: .6rem .5rem;
+                        .credit-card-container{
+                            display: flex;
+                            flex-flow: column;
+                            margin: 0 0 1em 0;
+
+                            .credit-card{
+                            border: 1px solid var(--common-color);
+                            display: flex;
+                            align-items: center;
+                            padding: var(--padding);
+
+                            .img{
+                                width: max-content;
+                                margin: 0 .9em 0 0;
+                                img{
+                                    width: 2em;
+                                }
+                            }
+                            .text{
+                                font-size: clamp(.8rem, 1.03vw, 1.5rem);
+                            }
+
+                            }
+
+                            .card__logo{
+                                display: flex;
+
+                                --margin: .3em .5em;
+
+                                img:first-child{
+                                    width: 6em;
+                                    height: 2em;
+                                    margin: var(--margin);
+                                }
+                                img:last-child{
+                                    width: 3em;
+                                    height: 2em;
+                                    margin: var(--margin);
+                                }
+                                
+                            }
+                        }
+
+                        .card__number-container{
+
+                            .number{
+                                display: flex;
+                                flex-direction: column;
+                                margin: 0 0 2em 0;
+                                width: 100%;
+                                // background-color: #66f;
+                                
+                                .text{
+                                    font-size: var(--payment-fs);
+                                    margin: 0 0 .5em;
+                                }
+                                .card__number{
+                                    width: 100%;
+
+                                        input{
+                                            width: inherit;
+                                            padding: var(--padding);
+                                            border: 1px solid var(--common-color);
+                                            font-size: clamp(1rem, 1.2vw, 2rem);
+                                        }
+                                }
+                            }
+                        }
+
+                        .expiry-date-container{
+                            display: flex;
+                            flex-direction: column;
+
+                            .text{
+                                font-size: clamp(.8rem, 1.1vw, 1.5rem);
+                            }
+
+                            .expiry-date{
+                                display: flex;
+                                justify-content: space-between;
+
+                                .month select,
+                                .year select{
+                                    padding: .09em .4em;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .cvv-container{
+                        width: 30%;
+                        
+                        .cvv{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                        
+                            .card__number{
+                                width: inherit;
+                                input{
+                                    width: inherit;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .total-container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    div{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: clamp(.6rem, 1.1vw, 1.6rem);
+                        line-height: 1.8em;
+                        padding: 0 1em;
+                    }
+                    
+                }
+                
+                .btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    button{
+                        background-color: hsla(217, 86%, 60%, 1);
+                        color: #ffffff;
+                        padding: .8em 2.1em;
+                        border-radius: .2em;
+                        transition: .2s;
+                        border: none;
+                        
+                    }
+                    button:hover{
+                        background-color: hsla(217, 86%, 30%, 1);
+                        transition: .2s;
+                        transform: scale(1.01);
+                    }
+                    
+                    
+
+                }
             }
         }
     }
